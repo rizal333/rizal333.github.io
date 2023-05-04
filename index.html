@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+        <html lang="en">
+
+        
+
+        <head>
+
+            <meta charset="UTF-8">
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Document</title>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
+
+                integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
+
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+            <style>
+
+                * {
+
+                    margin: 0;
+
+                    padding: 0;
+
+                    box-sizing: border-box;
+
+                    font-family: 'Poppins', sans-serif;
+
+                }
+
+        
+
+                body {
+
+                    display: flex;
+
+                    align-items: center;
+
+                    justify-content: center;
+
+                    min-height: 100vh;
+
+                    background-color: #080710;
+
+                }
+
+        
+
+                .background {
+
+                    width: 430px;
+
+                    height: 520px;
+
+                    left: 50%;
+
+                    top: 50%;
+
+                    position: absolute;
+
+                    transform: translate(-50%, -50%);
+
+                }
+
+        
+
+                .background .shape {
+
+                    position: absolute;
+
+                    border-radius: 50%;
+
+                    height: 200px;
+
+                    width: 200px;
+
+                }
+
+        
+
+                .shape:first-child {
+
+                    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(223, 233, 148, 1) 100%);
+
+                    left: -80px;
+
+                    top: -80px;
+
+                }
+
+        
+
+                .shape:last-child {
+
+                    background: linear-gradient(to right, #43c6ac, #f8ffae);
+
+                    right: -30px;
+
+                    bottom: -80px;
+
+                }
+
+                  
+
+                  
+
+                .tittle,
+
+                  .tittle .name {
+
+                    color: white;
+
+                    margin: 10px 0 5px 0;
+
+                    font-size: 23px;
+
+                    font-weight: 500;
+
+                }
+
+        
+
+         
+
+                .wrapper,
+
+                .wrapper .img-area,
+
+                .social-icons a,
+
+                .buttons button {
+
+                    background-color: rgba(255, 255, 255, 0.13);
+
+                    border-radius: 10px;
+
+                    backdrop-filter: blur(10px);
+
+                    border: 2px solid rgba(255, 255, 255, 0.1);
+
+                    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+
+                }
+
+        
+
+                .wrapper {
+
+                    position: relative;
+
+                    display: flex;
+
+                    align-items: center;
+
+                    justify-content: center;
+
+                    flex-direction: column;
+
+                    width: 350px;
+
+                    padding: 30px;
+
+                    border-radius: 10px;
+
+                }
+
+        
+
+                .wrapper .img-area {
+
+                    display: flex;
+
+                    align-items: center;
+
+                    justify-content: center;
+
+                    height: 150px;
+
+                    width: 150px;
+
+                    border-radius: 50%;
+
+                }
+
+        
+
+                .img-area .inner-area {
+
+                    height: calc(100% - 25px);
+
+                    width: calc(100% - 25px);
+
+                    border-radius: 50%;
+
+                }
+
+        
+
+                .inner-area img {
+
+                    height: 100%;
+
+                    width: 100%;
+
+                    border-radius: 50%;
+
+                    object-fit: cover;
+
+                }
+
+        
+
+                .wrapper .name {
+
+                    color: white;
+
+                    margin: 10px 0 5px 0;
+
+                    font-size: 23px;
+
+                    font-weight: 500;
+
+                }
+
+        
+
+                .wrapper .about {
+
+                    color: #d0d1d7;
+
+                    font-weight: 400;
+
+                    font-size: 16px;
+
+                }
+
+        
+
+                .wrapper .social-icons {
+
+                    margin: 15px 0 25px 0;
+
+                }
+
+        
+
+                .social-icons a {
+
+                    position: relative;
+
+                    display: inline-flex;
+
+                    text-decoration: none;
+
+                    border-radius: 50%;
+
+                    height: 40px;
+
+                    width: 40px;
+
+                    margin: 0 5px;
+
+                }
+
+        
+
+                .social-icons a:hover::before,
+
+                .wrapper .icon:hover::before,
+
+                .buttons button:hover:before {
+
+                    content: "";
+
+                    position: absolute;
+
+                    border-radius: 50%;
+
+                    background: #ecf0f3;
+
+                    top: 0;
+
+                    left: 0;
+
+                    bottom: 0;
+
+                    right: 0;
+
+                    box-shadow: inset -3px -3px 7px #ffffff,
+
+                        inset 3px 3px 5px #ceced1;
+
+                }
+
+        
+
+                .social-icons a i {
+
+                    width: 100%;
+
+                    height: 100%;
+
+                    font-size: 20px;
+
+                    line-height: 35px;
+
+                    position: relative;
+
+                    z-index: 3;
+
+                    text-align: center;
+
+                }
+
+        
+
+                .social-icons a:nth-last-child(1) i {
+
+                    color: #13d151;
+
+                }
+
+        
+
+                .social-icons a:nth-last-child(2) i {
+
+                    color: #e6ba12;
+
+                }
+
+        
+
+                .social-icons a:nth-last-child(3) i {
+
+                    color: #1da9e9;
+
+                }
+
+        
+
+                .social-icons a:nth-last-child(4) i {
+
+                    color: #f23400;
+
+                }
+
+        
+
+                .wrapper .buttons {
+
+                    display: flex;
+
+                    width: 100%;
+
+                    justify-content: space-between;
+
+                }
+
+        
+
+                .buttons button {
+
+                    outline: none;
+
+                    padding: 12px 0;
+
+                    color: #d0d1d6;
+
+                    font-size: 17px;
+
+                    position: relative;
+
+                    width: 100%;
+
+                    border: none;
+
+                    font-weight: 400;
+
+                    border-radius: 5px;
+
+                    cursor: pointer;
+
+                    z-index: 4;
+
+                }
+
+        
+
+                .buttons button:first-child {
+
+                    margin-right: 10px;
+
+                }
+
+        
+
+                .buttons button:last-child {
+
+                    margin-left: 10px;
+
+                }
+
+        
+
+                .buttons button:hover:before {
+
+                    z-index: -1;
+
+                    border-radius: 5px;
+
+                }
+
+        
+
+                .buttons button:hover {
+
+                    color: black;
+
+                }
+
+            </style>
+
+        </head>
+
+        
+
+        <body>
+
+            <!-- For the element of the background -->
+
+            <div class="background">
+
+                <div class="shape"></div>
+
+                <div class="shape"></div>
+
+            </div>
+
+            
+
+              
+
+              
+
+            <!-- Basic structure of profile card -->
+
+            <div class="wrapper">
+
+                <!-- Profile image area -->
+
+                <div class="img-area">
+
+                 
+
+                    <div class="inner-area">
+
+                      
+
+                        <img src="https://telegra.ph/file/5bf375b7e143ece6622be.jpg"
+
+                            alt="CSS Glassmorphism Generator">
+
+                    </div>
+
+                </div>
+
+                <!-- Basic information -->
+
+                <div class="name">rxyzal</div>
+
+               
+
+                <!-- social icon -->
+
+                <div class="social-icons">
+
+                   
+
+                    <a href="https://facebook.com" class="facebook"><i class="fab fa-facebook"></i></a>
+
+                    <a href="#" class="insta"><i class="fab fa-google"></i></a>
+
+                    <a href="#" class="yt"><i class="fab  fa-whatsapp"></i></a>
+
+        
+
+                </div>
+
+                <!-- 2 buttons -->
+
+                <div class="buttons">
+
+                    <button>Message</button>
+
+                    <button>Subscribe</button>
+
+                </div>
+
+        
+
+                <!-- 
+
+                    check more example at https://democoding.in/css-glassmorphism-generator
+
+                 -->
+
+        
+
+                <!-- 
+
+                    inspired by https://foolishdeveloper.com/
+
+                 -->
+
+        
+
+            </div>
+
+        </body>
+
+        
+
+        </html>
